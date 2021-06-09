@@ -2,59 +2,93 @@
 @import "./utils/_utils.scss";
 
 
+// * ==========================================================================
+// * 網站導覽
+// * ==========================================================================
 
-    // * ==========================================================================
-    // * 網站導覽
-    // * ==========================================================================
-
-    .sitemap-link {
-        counter-reset: sitemap-counter;
-
-        @include exclude-content {
-            list-style: none;
-            padding-left: 0px;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        @include min-width(768px) {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        > li {
-            width: 100%;
-            padding-bottom: 20px;
-            counter-increment: sitemap-counter;
-
-            @include min-width(768px) {
-                width: 50%;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-
-            @include min-width(1025px) {
-                width: 33.33%;
-            }
-        }
+.sitemap {
+    >p {
+      margin-bottom: 2rem;
+      line-height: 1.6em;
+      font-size: 100%;
     }
-
-    .sitemap-link-btn {
-        display: block;
-        font-weight: bold;
-        padding: 10px 15px;
-        background-color: $color-primary-1;
-        color: $color-white;
-        text-decoration: none;
-
-        &::before {
-            content: "(" counter(sitemap-counter) ") ";
-        }
-
-        @include min-width(1025px) {
-            &:hover, &:focus {
-                background-color: $color-primary-2;
-                color: $color-white;
-            }
-        }
+  }
+  
+  // * 第一層選單
+  .sitemapList {
+    margin-top: 3rem;
+  
+    > li {
+      margin-bottom: 1rem;
     }
+  
+    @include exclude-content {
+      list-style: none;
+      padding-left: 0px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .sitemapList-btn {
+    display: block;
+    padding: 15px;
+    line-height: 1.4em;
+    text-decoration: none;
+    background-color: $rice;
+    color: $black;
+    
+    @include min-width(map-get($tablet, sm)) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 120%;
+    }
+  }
+  
+  // * 第二層選單
+  .sitemapList-submenu {
+    @include exclude-content {
+      list-style: none;
+      padding-left: 0px;
+      margin-bottom: 0px;
+    }
+  }
+  
+  .sitemapList-submenu-btn {
+    display: inline-block;
+    padding: 15px;
+    line-height: 1.4em;
+    text-decoration: none;
+    color: $color-black;
+  
+    @include min-width(map-get($tablet, sm)) {
+      font-size: 110%;
+    }
+  }
+  
+  // * 第三層選單
+  .sitemapList-thirdmenu {
+    margin-left: 30px;
+    border-left: 1px $gray2 solid;
+  
+    > li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+  
+    @include exclude-content {
+      list-style: none;
+      padding-left: 0px;
+      margin-bottom: 0px;
+    }
+  }
+  
+  .sitemapList-thirdmenu-btn {
+    text-decoration: none;
+    color: $gray2;
+  
+    @include min-width(map-get($tablet, sm)) {
+      font-size: 100%;
+    }
+  }

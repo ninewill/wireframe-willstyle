@@ -2,70 +2,92 @@
 @import "./utils/_utils.scss";
 
 // * ==========================================================================
-// * 設定格狀版型排列規則
+// * 通用網格系統
 // * ==========================================================================
+// * 設定寬度
+$grid-width: (
+  50: 50%,
+  33: 33.33%,
+  25: 25%,
+  20: 20%,
+);
+$gap-width: 10px;
 
-.align {
-  @include exclude-content {
-    list-style: none;
-    padding-left: 0px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  @include min-width(1025px) {
-    width: 100%;
+.grid {
+  @include min-width(map-get($tablet, md)) {
     display: flex;
     flex-wrap: wrap;
-
+    margin-left: -#{$gap-width};
+    margin-right: -#{$gap-width};
     > li {
-      width: 50%;
-      padding-left: 10px;
-      padding-right: 10px;
+      flex: 0 0 auto;
+      width: 100%;
+      padding: 0 $gap-width;
+      box-sizing: border-box;
+    }
 
-      $col-width: 100, 80, 75, 66, 60, 50, 40, 33, 25, 20;
-
-      @each $width in $col-width {
-        &.col-#{$width} {
-          @if $width==66 {
-            width: 66.66%;
-          }
-          @if $width==33 {
-            width: 33.33%;
-          } @else {
-            width: $width#{"%"};
-          }
+    @each $name, $value in $grid-width {
+      &.grid-#{$name} {
+        > li {
+          width: $value;
         }
       }
     }
-
-    img {
-      width: 100%;
-    }
-
-    // 圖片在左
-    &.align-left {
-      flex-direction: row;
-    }
-
-    // 圖片在右
-    &.align-right {
-      flex-direction: row-reverse;
-    }
-
-    // 垂直置中
-    &.align-h-center {
-      align-items: center;
-    }
-  }
-
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4 {
-    margin-top: 0px;
   }
 }
 
+// * ==========================================================================
+// * 行內系統版型樣式設定（主要用在內頁按鈕對齊、表單元件對齊）
+// * ==========================================================================
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // margin-bottom: 1rem;
+
+  &.is-left {
+    justify-content: flex-start;
+  }
+
+  &.is-right {
+    justify-content: flex-end;
+  }
+
+  &.is-center {
+    justify-content: center;
+  }
+
+  &.is-between {
+    justify-content: space-between;
+  }
+
+  &.is-baseline {
+    align-items: baseline;
+  }
+
+  .side-left {
+    width: 100%;
+
+    @include min-width(map-get($tablet, sm)) {
+      width: auto;
+      margin-right: auto;
+      .btn {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .side-right {
+    width: 100%;
+
+    @include min-width(map-get($tablet, sm)) {
+      width: auto;
+      margin-left: auto;
+      .btn {
+        margin-left: 10px;
+      }
+    }
+  }
+}

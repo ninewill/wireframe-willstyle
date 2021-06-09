@@ -9,6 +9,26 @@ $(function () {
   let screenHeight = $window.outerHeight();
   let scrollTop = $window.scrollTop();
 
+
+  $('img.lazyload').attr('src', 'common/images/_loading.gif');
+
+    /*
+   * ==========================================================================
+   * 日夜間切換按鈕
+   * ==========================================================================
+   */
+    $("#switch").click(function () {
+      let htmlClasses = document.querySelector("html").classList;
+  
+      if (localStorage.theme === "dark") {
+        htmlClasses.remove("dark");
+        localStorage.removeItem("theme");
+      } else {
+        htmlClasses.add("dark");
+        localStorage.theme = "dark";
+      }
+    });
+
   /*
    * ==========================================================================
    * 把語言選擇連結複製到 MENU 選單
@@ -712,18 +732,6 @@ $(function () {
 
   ctrlDropdownList();
 
-  //日夜按鈕切換
-  $("#switch").click(function () {
-    let htmlClasses = document.querySelector("html").classList;
-
-    if (localStorage.theme === "dark") {
-      htmlClasses.remove("dark");
-      localStorage.removeItem("theme");
-    } else {
-      htmlClasses.add("dark");
-      localStorage.theme = "dark";
-    }
-  });
 
   /*
    * ==========================================================================

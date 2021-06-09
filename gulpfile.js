@@ -60,7 +60,7 @@ gulp.task("extend",  function() {
 
 const JS_PLUGINS = [
   "./common/js/plugins/jquery-3.2.1.min.js",
-  // "./common/js/plugins/lazysizes.min.js",
+  "./common/js/plugins/lazysizes.min.js",
   // "./common/js/plugins/lightgallery-all.min.js",
   // "./common/js/plugins/footable.js",
   // "./common/js/plugins/swiper.min.js",
