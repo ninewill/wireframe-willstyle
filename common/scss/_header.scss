@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "./utils/_utils.scss";
+@import './utils/_utils.scss';
 
 @mixin header($language) {
   // * ==========================================================================
@@ -63,7 +63,8 @@
       top: 0px;
       left: 0px;
       color: $color-black;
-      background: url("../images/logo.svg") no-repeat center/contain;
+      background: url('../images/icon/wireframe-logo-black.png') no-repeat
+        center/contain;
 
       @include hidetext;
     }
@@ -93,7 +94,7 @@
       align-items: center;
     }
   }
-  .topnav-item-h{
+  .topnav-item-h {
     margin-left: 30px;
   }
 
@@ -109,18 +110,18 @@
   // * ==========================================================================
 
   .sitemap-btn {
-		display: flex;
-		align-items: center;
+    display: flex;
+    align-items: center;
     color: $color-black;
 
     &::before {
-			content: '';
-			width: 40px;
-			height: 40px;
-			display: block;
+      content: '';
+      width: 40px;
+      height: 40px;
+      display: block;
       background: {
         color: transparent;
-        image: url("../images/icon/icon-sitemap.svg");
+        image: url('../images/icon/icon-sitemap.svg');
         position: center;
         repeat: no-repeat;
         size: 70%;
@@ -148,17 +149,17 @@
   }
 
   .search-btn {
-		display: flex;
-		align-items: center;
+    display: flex;
+    align-items: center;
     color: $color-black;
 
-		&::before {
-			content: '';
-			width: 40px;
-			height: 40px;
-			display: block;
-			background: url("../images/icon/icon-search.svg") no-repeat center/70%;
-		}
+    &::before {
+      content: '';
+      width: 40px;
+      height: 40px;
+      display: block;
+      background: url('../images/icon/icon-search.svg') no-repeat center/70%;
+    }
   }
 
   .search-list {
@@ -166,12 +167,11 @@
     position: absolute;
     z-index: 1;
   }
-  
-  .share-list{
+
+  .share-list {
     position: absolute;
     z-index: 200;
 
-    
     > li {
       padding-top: 5px;
     }
@@ -191,36 +191,36 @@
 
       &.icon-facebook {
         background-color: #3b5998;
-        background-image: url("../images/icon/facebook.svg");
+        background-image: url('../images/icon/facebook.svg');
       }
 
       &.icon-line {
         background-color: #2cbf13;
-        background-image: url("../images/icon/line.svg");
+        background-image: url('../images/icon/line.svg');
       }
 
       &.icon-twitter {
         background-color: #00aced;
-        background-image: url("../images/icon/twitter.svg");
+        background-image: url('../images/icon/twitter.svg');
       }
 
       &.icon-plurk {
         background-color: #c6602b;
-        background-image: url("../images/icon/plurk.svg");
+        background-image: url('../images/icon/plurk.svg');
       }
     }
   }
 
-	.back-home{
-		height: 40px;
-	}
-	
-	.back-home-btn{
-		width: 100%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-	}
+  .back-home {
+    height: 40px;
+  }
+
+  .back-home-btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 
   // * ==========================================================================
   // * 語言選擇
@@ -246,9 +246,9 @@
       font-weight: bold;
       color: $color-white;
       background-color: $color-white;
-			transition: all 0.2s ease-in-out;
-			outline: none;
-			border: 1px solid $color-gray-1;
+      transition: all 0.2s ease-in-out;
+      outline: none;
+      border: 1px solid $color-gray-1;
 
       &.current {
         // background-color: $color-primary-1;
@@ -264,23 +264,23 @@
           box-shadow: $focus-border-inset;
         }
       }
-		}
-		
-		>span{
-			display: flex;
-			align-items: center;
-			padding: 0.5rem;
+    }
 
-			&:after {
-				content: "";
-				width: 0;
-				height: 0;
-				margin-left: 2rem;
-				display: block;
-				border-style: solid;
-				border-width: 8px 6px 0 6px;
-				border-color: $color-gray-3 transparent transparent transparent;
-			}
-		}
+    > span {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        margin-left: 2rem;
+        display: block;
+        border-style: solid;
+        border-width: 8px 6px 0 6px;
+        border-color: $color-gray-3 transparent transparent transparent;
+      }
+    }
   }
 }
