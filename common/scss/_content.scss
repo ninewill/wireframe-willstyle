@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import './utils/_utils.scss';
+@import "./utils/_utils.scss";
 
 // * ==========================================================================
 // * 主要內容區域（#main 裡面的基本樣式）
@@ -55,7 +55,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       width: 100px;
       height: 2px;
       display: inline-block;
@@ -101,7 +101,7 @@
       transition: 0.2s;
 
       &:hover {
-        background-color: $color-red-1;
+        background-color: $color-black;
 
         a {
           color: $color-white;
@@ -123,7 +123,7 @@
 
 .open {
   color: $color-white;
-  background-color: $color-red-1;
+  background-color: $color-black;
 }
 
 .navbar {
@@ -151,6 +151,7 @@
   }
 }
 
+
 .breadcrumbs {
   display: flex;
   // align-items: center;
@@ -176,18 +177,18 @@
     margin-right: 1rem;
 
     &::after {
-      content: '';
+      content: "";
       width: 6px;
       height: 12px;
       display: block;
       position: absolute;
       right: -0.7813rem;
-      background-image: url('../images/icon/icon-right-arrow.svg');
+      background-image: url("../images/icon/icon-right-arrow.svg");
     }
 
     &:last-child {
       &::after {
-        content: '';
+        content: "";
         display: none;
       }
     }
@@ -329,7 +330,7 @@
 .searchButton {
   width: 55px;
   height: 50px;
-  background-image: url('../images/icon/icon-search-white.svg');
+  background-image: url("../images/icon/icon-search-white.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -520,7 +521,7 @@
 
     &:after,
     &:before {
-      content: '';
+      content: "";
       width: 100%;
       height: 100%;
       position: absolute;
@@ -567,7 +568,7 @@
     padding-right: 1rem;
 
     &::before {
-      content: '';
+      content: "";
       width: 100%;
       display: block;
       position: absolute;
@@ -577,7 +578,7 @@
 
     &:last-child {
       &::after {
-        content: '';
+        content: "";
         width: 100%;
         display: block;
         position: absolute;
@@ -720,7 +721,7 @@
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     width: 14px;
     height: 12px;
     position: absolute;
@@ -735,7 +736,7 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     width: 6px;
     height: 12px;
     position: absolute;
@@ -749,7 +750,7 @@
 .previous-f {
   &::after {
     left: auto;
-    background-image: url('../images/icon/icon-left-arrow2.svg');
+    background-image: url("../images/icon/icon-left-arrow2.svg");
 
     @include min-width(767px) {
       left: 12px;
@@ -760,7 +761,7 @@
 .previous-s {
   &::before {
     left: auto;
-    background-image: url('../images/icon/icon-left-arrow.svg');
+    background-image: url("../images/icon/icon-left-arrow.svg");
 
     @include min-width(767px) {
       left: 16px;
@@ -771,7 +772,7 @@
 .next-f {
   &::after {
     right: auto;
-    background-image: url('../images/icon/icon-right-arrow2.svg');
+    background-image: url("../images/icon/icon-right-arrow2.svg");
 
     @include min-width(767px) {
       right: 12px;
@@ -782,7 +783,7 @@
 .next-s {
   &::before {
     right: auto;
-    background-image: url('../images/icon/icon-right-arrow.svg');
+    background-image: url("../images/icon/icon-right-arrow.svg");
 
     @include min-width(767px) {
       right: 16px;
@@ -860,7 +861,7 @@
   .acnav-group {
     &:last-child {
       &::after {
-        content: '';
+        content: "";
         width: 100%;
         display: block;
         border-bottom: 1px solid $color-gray-1;
@@ -870,7 +871,7 @@
 
   // font awesome icon 'fa-plus'
   .has-children > &__label::after {
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     display: block;
@@ -878,7 +879,7 @@
     text-rendering: auto;
     margin-right: 0;
     margin-left: auto;
-    background-image: url('../images/icon/icon-add.svg');
+    background-image: url("../images/icon/icon-add.svg");
     transition: transform 0.3s;
   }
 
@@ -956,7 +957,7 @@
     transition: 0.25s;
 
     &::before {
-      content: '';
+      content: "";
       width: 4px;
       height: 21px;
       display: block;
@@ -1286,12 +1287,12 @@
 
 .data-download {
   &::before {
-    content: '';
+    content: "";
     width: 30px;
     height: 35px;
     display: inline-block;
     margin-right: 1rem;
-    background-image: url('../images/icon/icon-download.svg');
+    background-image: url("../images/icon/icon-download.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1492,7 +1493,7 @@
   .breadcrumbs-item {
     > li {
       &::after {
-        content: '';
+        content: "";
         display: none;
       }
 
@@ -1503,43 +1504,43 @@
         position: absolute;
         top: 0.85rem;
         right: -0.7813rem;
-        background-image: url('../images/icon/icon-right-arrow.svg');
+        background-image: url("../images/icon/icon-right-arrow.svg");
       }
     }
   }
 
   .page-click1 {
     &::after {
-      content: '';
+      content: "";
       display: none;
     }
   }
 
   .previous-f {
-    background-image: url('../images/icon/icon-left-arrow2.svg');
+    background-image: url("../images/icon/icon-left-arrow2.svg");
     background-position: 10% center;
     background-repeat: no-repeat;
   }
 
   .previous-s {
-    background-image: url('../images/icon/icon-left-arrow.svg');
+    background-image: url("../images/icon/icon-left-arrow.svg");
     background-position: 10% center;
     background-repeat: no-repeat;
   }
 
   .page-click2 {
     &::before {
-      content: '';
+      content: "";
       display: none;
     }
   }
   .next-f {
-    background-image: url('../images/icon/icon-right-arrow2.svg');
+    background-image: url("../images/icon/icon-right-arrow2.svg");
     background-position: 90% center;
     background-repeat: no-repeat;
   }
   .next-s {
-    background-image: url('../images/icon/icon-right-arrow.svg');
+    background-image: url("../images/icon/icon-right-arrow.svg");
     background-position: 90% center;
     background-repeat: no-repeat;
   }
@@ -1548,7 +1549,7 @@
     color: $color-red-1;
 
     &::before {
-      content: '';
+      content: "";
       display: none;
     }
 
@@ -1600,8 +1601,7 @@
   display: block;
   left: 0;
   top: 0;
-  background: url(../images/icon/wireframe-logo-black.png) no-repeat
-    center/contain;
+  background: url(../images/wireframe-logo-black.png) no-repeat center/contain;
   text-indent: -9999px;
 }
 
@@ -1625,7 +1625,7 @@
 }
 
 .errortext_h1::before {
-  content: '';
+  content: "";
   width: 4px;
   height: 55px;
   display: block;
@@ -1702,7 +1702,7 @@ a.btn:hover {
 .current-tag {
   //三角形製作
   &::before {
-    content: '';
+    content: "";
     display: inline-block;
     position: absolute;
     top: 70px;
@@ -1714,8 +1714,8 @@ a.btn:hover {
     z-index: 1;
   }
 
-  &::after {
-    content: '';
+  &::after{
+    content: "";
     display: inline-block;
     position: absolute;
     top: 70px;
@@ -1727,12 +1727,12 @@ a.btn:hover {
   }
 }
 
-.more-filter-btn {
+.more-filter-btn{
   position: relative;
 
   //三角形製作
   &::before {
-    content: '';
+    content: "";
     display: inline-block;
     position: absolute;
     top: 7px;
@@ -1744,8 +1744,8 @@ a.btn:hover {
     z-index: 1;
   }
 
-  &::after {
-    content: '';
+  &::after{
+    content: "";
     display: inline-block;
     position: absolute;
     top: 7px;
@@ -1766,14 +1766,14 @@ a.btn:hover {
   background-color: #f4f4f4;
   z-index: 1;
 
-  > li {
+  >li{
     border-bottom: 1px solid $color-brown-0;
 
-    &:last-child {
+    &:last-child{
       border: none;
     }
 
-    > a {
+    >a{
       width: 100%;
       height: 100%;
       display: block;
